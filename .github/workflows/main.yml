@@ -22,10 +22,8 @@ jobs:
           npm install -g @angular/cli
           npm install
           ng build --configuration production --base-href=""
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v2
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          BASE_BRANCH: main
-          BRANCH: gh-pages
-          FOLDER: dist/palio-web-app
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: dist/palio-web-app
+          branch: gh-pages
