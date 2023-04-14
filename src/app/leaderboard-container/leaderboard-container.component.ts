@@ -1,9 +1,13 @@
 import {Component, Inject} from '@angular/core';
+import {fade} from './../animations'
 
 @Component({
   selector: 'app-leaderboard-container',
   templateUrl: './leaderboard-container.component.html',
-  styleUrls: ['./leaderboard-container.component.css']
+  styleUrls: ['./leaderboard-container.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class LeaderboardContainerComponent {
   palio_year: string;

@@ -1,4 +1,4 @@
-<div id="leaderboard-podium" *ngIf="leaderboard">
+<div id="leaderboard-podium" *ngIf="leaderboard" @fade>
   <app-leaderboard-podium-element id="second-place" class="second-place"
                                   [result]="leaderboard[1]"
                                   [logo]="logos[leaderboard[1]['facoltà']]"

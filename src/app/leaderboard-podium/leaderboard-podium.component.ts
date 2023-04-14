@@ -1,11 +1,15 @@
 import {Component, Inject} from '@angular/core';
 import * as LEADERBOARDS from "../../assets/leaderboards.json";
 import * as LOGOS from "../../assets/logo_binding";
+import {fade} from './../animations'
 
 @Component({
   selector: 'app-leaderboard-podium',
   templateUrl: './leaderboard-podium.component.html',
-  styleUrls: ['./leaderboard-podium.component.css']
+  styleUrls: ['./leaderboard-podium.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class LeaderboardPodiumComponent {
   leaderboards: any = LEADERBOARDS;
